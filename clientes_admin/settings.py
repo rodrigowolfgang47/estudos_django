@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'clientes_admin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'clientes_db',
+        'NAME': 'clientes_database',
         'USER': 'postgres',
         'PASSWORD': '55136691',
         'HOST': '127.0.0.1',
