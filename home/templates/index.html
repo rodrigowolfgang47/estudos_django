@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seja bem vindo</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <p>Olá</p>
+        <a href="{% url 'logout'%}">Sair</a>
+    {% else %}
+        <a href="{% url 'login' %}">Entrar</a>
+    {% endif %}
+    <h1>
+        {% if user.is_authenticated %}
+            SEJA BEM VINDO {{ user.username.upper }}
+        {% else %}
+            SEJA BEM VINDO
+        {% endif %}
+
+    </h1>
+    <a href="{% url 'person_list' %}"> ir para lista </a>
+</body>
+</html>
