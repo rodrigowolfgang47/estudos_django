@@ -2,3 +2,4 @@
 *.sqelite3
 *pyc
 media
+.env
