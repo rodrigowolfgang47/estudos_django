@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Seja bem-vindo{% endblock %}
+
+{% block main %}
+
+    <main class="principal">
+            {% if user.is_authenticated %}
+            <section class="inicio">
+                <p>Olá, {{ user.username.capitalize }}</p>
+                <a href="{% url 'logout'%}" class="btn-2">Sair</a>
+            </section>
+        {% else %}
+            <section class="inicio">
+                <p>Olá</p>
+                <a href="{% url 'login' %}" class="btn" >Entrar</a>
+            </section>
+        {% endif %}
+        <div class="wellcome">
+            <div id="barra">
+            </div>
+            <h1>
+            {% if user.is_authenticated %}
+                SEJA BEM VINDO
+            {% else %}
+                SEJA BEM VINDO
+            {% endif %}
+            </h1>
+        </div>
+        <a href="{% url 'person_list' %}" class="lista-button"> ir para lista </a>
+    </main>
+
+{% endblock %}

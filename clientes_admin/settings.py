@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['clientes-admin.herokuapp.com']
+ALLOWED_HOSTS = ['clientes-admin.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'clientes',
-    'home'
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -112,7 +112,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    'static'
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
