@@ -2,9 +2,10 @@
 
 *{
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: blueviolet;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 256;
+    font-weight: 700;
     box-sizing: border-box;
 }
 
@@ -14,6 +15,7 @@ body{
     justify-content: center;
     flex-direction: column;
     height:100vh;
+    background-color: #f4f4f4;
 }
 
 
@@ -28,6 +30,10 @@ body{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    background-color: #e3e3e3;
+    padding: 62px;
+    box-sizing: border-box;
+    box-shadow: 9px 8px 0px 0px;
 }
 
 /* CLASSE DOS BORTÕES E NOME*/
@@ -44,34 +50,41 @@ body{
 .wellcome{
     display:flex;
     align-items:center;
-    justify-content:center;
+    /* justify-content:center; */
     padding: 20px;
-    background-color: blueviolet;
-    width: 100%;
+    /* background-color: blueviolet; */
+    /* width: 100%; */
     min-width: 279px;
-    height: 300px;
+    /* height: 300px; */
     max-width: 450px;
-    display:flex;
+    /* display:flex; */
     align-items:center;
-    border-radius: 0px 200px;
+    border-radius: 0;
+    border: solid 1px blueviolet;
+    margin-top: 13px;
+    padding: 0px;
+    padding-left: 32px;
 }
 
 h1{
     font-size: 55px;
     font-weight: 900;
     font-style: italic;
-    color: white;
     width:60%;
     padding-left: 30px;
+}
 
+i{
+    font-size: 47px;
+    font-weight: 500;
 }
 
 
-#barra{
+.barra{
     height: 100%;
     max-height:67%;
     width: 10px;
-    background-color:white
+    background-color: blueviolet;
 }
 
 /* CLASSE CA MESAGEM DO SEJA BEM VINDO ACABA AQUI*/
@@ -89,8 +102,8 @@ a{
     background-color: blueviolet;
     color: white;
     width: 75px;
-    height: 45px;
-    border-radius: 10px;
+    height: 37px;
+    /* border-radius: 10px; */
     border: none;
 }
 
@@ -101,8 +114,7 @@ a{
     background-color: red;
     color: white;
     width: 75px;
-    height: 45px;
-    border-radius: 10px;
+    height: 37px;
     border: none;
 }
 

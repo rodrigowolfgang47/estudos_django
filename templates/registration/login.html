@@ -1,18 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block content %}<link rel="stylesheet" href="{% static 'login.css' %}">{% endblock %}
 
 {% block title %}Faça login{% endblock %}
 
 {% block main %}
-    <div class="caixa-do-login">
+    <div class="principal">
         <h2>
-            Login
+            <div class="barra">
+            </div>
+            <p>
+                Login
+            </p>
         </h2>
             <form method="POST">
             {% csrf_token %}
             {{ form }}
             <div class="inicio">
                 <a href="{% url 'home' %}" class="voltar">Voltar</a>
-                <button type="submit" class="btn-3">Login</button>
+                <button type="submit" class="btn">Login</button>
             </div>
         </form>
 
