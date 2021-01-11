@@ -6,7 +6,7 @@
 {% block main %}
 
     <main class="principal">
-            {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
             <section class="inicio">
                 <p>Olá, {{ user.username.capitalize }}</p>
                 <a href="{% url 'logout'%}" class="btn-2">Sair</a>
@@ -28,7 +28,12 @@
             {% endif %}
             </h1>
         </div>
-        <a href="{% url 'person_list' %}" class="lista-button"> ir para lista </a>
+
+        {% if user.is_authenticated %}
+        <div class="lista-link">
+            <a href="{% url 'person_list' %}"> ir para lista </a>
+        </div>
+        {% endif %}
     </main>
 
 {% endblock %}

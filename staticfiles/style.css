@@ -16,33 +16,41 @@ body{
     height:100vh;
 }
 
+
+/* INICIO DA PÁGINA HOMEPAGE AQUI*/
+
+/* CLASSE DO CONTEINER*/
+
 .principal{
     width: 70%;
-    max-width: 1170px;
+    max-width: 450px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
 }
 
+/* CLASSE DOS BORTÕES E NOME*/
 .inicio{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 61%;
-    max-width: 1170px;
+    width: 100%;
+    max-width: 750px;
     font-size: 18px;
 }
 
+/* CLASSE CA MESAGEM DO SEJA BEM VINDO*/
 .wellcome{
     display:flex;
     align-items:center;
     justify-content:center;
     padding: 20px;
     background-color: blueviolet;
-    width: 39%;
-    min-width: 400px;
+    width: 100%;
+    min-width: 279px;
     height: 300px;
+    max-width: 450px;
     display:flex;
     align-items:center;
     border-radius: 0px 200px;
@@ -58,6 +66,7 @@ h1{
 
 }
 
+
 #barra{
     height: 100%;
     max-height:67%;
@@ -65,11 +74,13 @@ h1{
     background-color:white
 }
 
-
+/* CLASSE CA MESAGEM DO SEJA BEM VINDO ACABA AQUI*/
 
 a{
     text-decoration: none;
 }
+
+/* CLASSE DOS BOTÕES DA HOMEPAGE*/
 
 .btn{
     display: flex;
@@ -80,6 +91,7 @@ a{
     width: 75px;
     height: 45px;
     border-radius: 10px;
+    border: none;
 }
 
 .btn-2{
@@ -91,9 +103,33 @@ a{
     width: 75px;
     height: 45px;
     border-radius: 10px;
+    border: none;
 }
 
 .lista-button{
     margin-top: 20px;
     color: sienna;
 }
+
+.lista-link{
+    margin-top: 25px;
+    text-decoration: underline;
+}
+
+.lista-link a {
+    color: #585858;
+}
+    
+
+/* CLASSE DOS BOTÕES DA HOMEPAGE ACABA AQUI*/
+
+
+/* FIM DA PÁGINA HOMEPAGE AQUI*/
+
+
+
+
+/* INICIO DA PÁGINA DE LOGIN*/
+
+/* FIM DA PÁGINA DE LOGIN*/
+

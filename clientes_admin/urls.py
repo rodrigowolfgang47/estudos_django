@@ -20,11 +20,12 @@ from django.conf import settings
 from clientes import urls as clientes_urls
 from django.contrib.auth import views as auth_views
 from home import urls as home_ulr
+from clientes.forms import MyAuthForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('clientes/', include(clientes_urls)),
     path('', include(home_ulr)),
-    path('login/', auth_views.LoginView.as_view(), name='login'),
+    path('login/', auth_views.LoginView.as_view(authentication_form=MyAuthForm), name='login'),
     path('logout', auth_views.LogoutView.as_view(), name='logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
