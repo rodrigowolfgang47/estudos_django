@@ -9,7 +9,15 @@ from django.forms.widgets import PasswordInput, TextInput
 class PersonForm(ModelForm):
     class Meta:
         model = Person
-        fields = ['first_name', 'last_name', 'age', 'salary', 'bio', 'photo']
+        fields = ['first_name', 'last_name', 'age', 'salary', 'bio', 'photo']   
+
+        widgets = {
+            'first_name': forms.TextInput(attrs={'placeholder': 'Primeiro nome'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Ultimo nome'}),
+            'age': forms.TextInput(attrs={'placeholder': 'Idade'}),
+            'salary': forms.TextInput(attrs={'placeholder': 'Salário'}),
+            'bio': forms.TextInput(attrs={'placeholder': 'Resumo'}),
+            }
 
 class MyAuthForm(AuthenticationForm):
     class Meta:
