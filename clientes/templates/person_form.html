@@ -1,24 +1,17 @@
+{% extends "base.html" %}
 {% load static %}
-<!doctype html>
 
-<html lang="pt-br">
+{% block content %}<link rel="stylesheet" href="{% static 'login.css' %}">{% endblock %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'estilo.css' %}">
-    <title>Formulário</title>
-</head>
-<body>
-    <form method="POST" enctype="multipart/form-data">
+{% block title %}Formulário{% endblock %}
+
+{% block main %}
+    <form method="POST" enctype="multipart/form-data" class="principal">
         {% csrf_token %}
         {{ form }}
-        <button type="submit">
+        <button type="submit" class="btn">
             Salvar
         </button>
     </form>
     <a href="{% url 'person_list' %}">Voltar para lista</a>
-</body>
-</html>
+{% endblock %}
