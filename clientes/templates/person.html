@@ -7,17 +7,21 @@
     {% block title %}Pessoas{% endblock %}
 
     {% block main %}
-        <a href="{% url 'logout' %}">Sair</a>
-        <ul>
-            {% for person in persons %}
-                <a href="{% url 'update' person.id %}"> <li> Nome: {{person.first_name}} {{ person.last_name }}
-                <br> Idade: {{ person.age }} </li></a>
-                <a href="{% url 'delete' person.id %}">deletar</a>
-                <br>
-                <br>
-            {% endfor %}
-        </ul>
-        <br>
+        <div class="principal">
+            <a href="{% url 'logout' %}" class="btn-2">Sair</a>
+            <ul>
+                {% for person in persons %}
+                    <a href="{% url 'update' person.id %}">
+                        <li class="listinha"> 
+                            
+                            Nome: <span>{{person.first_name}} {{ person.last_name.capitalize }} </span>
+                            
+                            <a href="{% url 'delete' person.id %}">deletar</a>
+                        </li>
+                    </a>
+                {% endfor %}
+            </ul>
+            <a href=" {% url 'person_new' %} " class="btn-3">Cadastrar Novo</a>
+        </div>
 
-        <a href=" {% url 'person_new' %} ">Cadastrar Novo</a>
     {% endblock %}

@@ -12,12 +12,26 @@
 body{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     height:100vh;
     background-color: #f4f4f4;
+    margin: 0px;
 }
 
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.linha{
+    height: 10px;
+    background-color: blue;
+    width: 100%;
+}
 
 /* INICIO DA PÁGINA HOMEPAGE AQUI*/
 
@@ -103,7 +117,6 @@ a{
     color: white;
     width: 75px;
     height: 37px;
-    /* border-radius: 10px; */
     border: none;
 }
 
@@ -135,13 +148,28 @@ a{
 
 /* CLASSE DOS BOTÕES DA HOMEPAGE ACABA AQUI*/
 
+footer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #d7d7d7;
+    align-self:flex-end;
+}
 
-/* FIM DA PÁGINA HOMEPAGE AQUI*/
+.footer{
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-
-
-
-/* INICIO DA PÁGINA DE LOGIN*/
-
-/* FIM DA PÁGINA DE LOGIN*/
+h4{
+    color: #666666;
+    font-size: 12px;
+    font-weight: 400;
+}
 
