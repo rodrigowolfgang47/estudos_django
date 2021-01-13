@@ -6,6 +6,7 @@
 {% block title %}Formulário{% endblock %}
 
 {% block main %}
+
     <form method="POST" enctype="multipart/form-data" class="principal">
         {% csrf_token %}
         {{ form }}

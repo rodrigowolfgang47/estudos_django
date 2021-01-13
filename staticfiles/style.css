@@ -174,3 +174,15 @@ h4{
     font-weight: 400;
 }
 
+a svg{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    align-self: flex-end;
+    color: red;
+}
+
+a svg path{
+    
+    background-color: red;
+}
