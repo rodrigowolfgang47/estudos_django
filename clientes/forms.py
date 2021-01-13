@@ -11,7 +11,14 @@ class PersonForm(ModelForm):
         model = Person
         fields = ['first_name', 'last_name', 'age', 'salary', 'bio', 'photo']
 
-        labels = {'first_name': False, 'last_name': False, 'age': False, 'salary': False, 'bio': False, 'photo': False}
+        labels = {
+        'first_name': False,
+        'last_name': False,
+        'age': False,
+        'salary': False,
+        'bio': False,
+        'photo': False
+        }
         
         widgets = {
             'first_name': forms.TextInput(attrs={'placeholder': 'Primeiro nome'}),
