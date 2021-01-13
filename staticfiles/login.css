@@ -32,11 +32,8 @@ input{
     width: 100%;
     margin-bottom: 30px;
     background-color: white;
-}
-
-input:focus{
-    border: solid 1px blueviolet;
-    transition: ease-in-out, with  .35s ease-in-out;
+    display: flex;
+    align-items: flex-start;
 }
 
 form ul{
@@ -55,7 +52,7 @@ li{
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: blueviolet;
+    color: #b2b2b2;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -63,14 +60,14 @@ li{
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: blueviolet;
+    color: #b2b2b2;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-    color: blueviolet;
+    color: #b2b2b2;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -81,3 +78,14 @@ form{
     flex-direction:column;
     margin:20px
 }
+
+#id_bio{
+    height: 200px;
+}
+
+#id_photo{
+    background-color:#e3e3e3;
+    padding:0px;
+    font-size:14px;
+    color:#8b8b8b;
+  }
