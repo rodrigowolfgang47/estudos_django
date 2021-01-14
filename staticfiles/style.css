@@ -183,6 +183,5 @@ a svg{
 }
 
 a svg path{
-    
-    background-color: red;
+    fill: red;
 }
