@@ -1,5 +1,5 @@
 .idea
-.sqelite3
+db.sqlite3
 pyc
 media
 .env
