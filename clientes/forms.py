@@ -3,7 +3,6 @@ from django.forms import ModelForm
 from .models import Person
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
-from django.forms.widgets import PasswordInput, TextInput
 
 
 class PersonForm(ModelForm):
@@ -18,7 +17,7 @@ class PersonForm(ModelForm):
         'salary': False,
         'bio': False,
         'photo': False
-        }
+            }
         
         widgets = {
             'first_name': forms.TextInput(attrs={'placeholder': 'Primeiro nome'}),
