@@ -1,5 +1,5 @@
-idea
-sqelite3
+.idea
+.sqelite3
 pyc
 media
-env
+.env
